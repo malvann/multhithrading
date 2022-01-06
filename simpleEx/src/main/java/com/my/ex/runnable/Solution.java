@@ -1,4 +1,4 @@
-package com.my.runnable;
+package com.my.ex.runnable;
 
 import com.my.util.Sleeper;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.my.inParallel;
+package com.my.ex.inParallel;
 
 import lombok.extern.slf4j.Slf4j;
 

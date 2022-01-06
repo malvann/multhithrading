@@ -1,4 +1,4 @@
-package com.my.recursiveAction;
+package com.my.ex.recursiveAction;
 
 import lombok.AllArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.my.forkJoin;
+package com.my.ex.forkJoin;
 
 import lombok.AllArgsConstructor;
 

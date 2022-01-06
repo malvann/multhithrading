@@ -1,4 +1,4 @@
-package com.my.forkJoin;
+package com.my.ex.forkJoin;
 
 import lombok.extern.slf4j.Slf4j;
 
