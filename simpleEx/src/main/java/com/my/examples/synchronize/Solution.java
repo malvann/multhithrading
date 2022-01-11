@@ -2,6 +2,8 @@ package com.my.examples.synchronize;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -9,9 +11,10 @@ import java.util.concurrent.Executors;
 public class Solution {
     public static void main(String[] args) {
         ExecutorService service = Executors.newFixedThreadPool(5);
-        service.submit(new LineAppender("A"));
-        service.submit(new LineAppender("Z"));
+        List<String> list = new ArrayList<>();
+        service.submit(new LineAppender("A", list));
+        service.submit(new LineAppender("Z", list));
         service.shutdown();
-        log.info("Result builder line: {}", LineAppender.getResult());
+        log.info("Result builder line: {}", list);
     }
 }

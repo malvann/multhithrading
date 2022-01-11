@@ -1,27 +1,24 @@
 package com.my.examples.synchronize;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class LineAppender implements Runnable {
-    private static final List<String> sList = Collections.synchronizedList(new ArrayList<>());
+    private final List<String> sList;
     private final String letter;
 
-    LineAppender(String letter) {
+    LineAppender(String letter, List<String> list) {
         this.letter = letter;
+        this.sList = list;
     }
 
     @Override
     public void run() {
         int n = 0;
         do {
-            sList.add(letter);
+            synchronized (sList) {
+                sList.add(letter);
+            }
             n++;
         } while (n < 5);
-    }
-
-    public static String getResult() {
-        return sList.toString();
     }
 }
