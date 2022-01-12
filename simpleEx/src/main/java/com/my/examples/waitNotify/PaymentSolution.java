@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Slf4j
-public class Solution {
+public class PaymentSolution {
     public static void main(String[] args) {
         PaymentAccount account = new PaymentAccount();
         ThreadLocalRandom random = ThreadLocalRandom.current();
