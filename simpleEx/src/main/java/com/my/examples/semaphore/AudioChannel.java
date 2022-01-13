@@ -8,8 +8,8 @@ public class AudioChannel extends Channel {
 
     @Override
     public void using() {
-        log.info("Start using");
+        log.info("Start using {}", getId());
         Sleeper.sleep(2);
-        log.info("End using");
+        log.info("End using {}", getId());
     }
 }

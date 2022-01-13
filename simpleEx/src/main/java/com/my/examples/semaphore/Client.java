@@ -32,6 +32,6 @@ public class Client extends Thread {
 
     @Override
     public String toString() {
-        return "Client :" + id;
+        return "Client: " + id;
     }
 }

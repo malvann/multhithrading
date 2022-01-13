@@ -27,7 +27,7 @@ public class ChannelPool<T extends Channel> {
                 if (tOptional.isPresent()) {
                     Channel ch = tOptional.get();
                     ch.setBusy(true);
-                    log.info("Client: {} took channel {}", client, ch);
+                    log.info("{} took channel {}", client, ch);
                 }
                 return tOptional;
             }
@@ -40,6 +40,6 @@ public class ChannelPool<T extends Channel> {
 
     public void releaseSource(Client client, T source) {
         source.setBusy(false);
-        log.info("Client: {}: {} --> released", client, source);
+        log.info("{} - {} --> released", client, source);
     }
 }
