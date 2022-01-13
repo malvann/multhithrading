@@ -25,19 +25,17 @@ public class PointManager extends Thread {
         else distance();
     }
 
-    public double distance() {
-        double distance = 0;
+    public void distance() {
         try {
             lock.readLock().lock();
             log.info("{} begin reading: {}", threadName, point);
             Sleeper.sleep(2);
-            distance = Math.hypot(point.getX(), point.getY());
+            double distance = Math.hypot(point.getX(), point.getY());
             Sleeper.sleep(2);
             log.info("{} end reading: {}", threadName, String.format("%.2f", distance));
         } finally {
             lock.readLock().unlock();
         }
-        return distance;
     }
 
     public void randomChangedPoint() {
